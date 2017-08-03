@@ -1,0 +1,24 @@
+Open:
+
+sudo vim /etc/apt/sources.list    
+
+Insert line:
+
+deb https://vps.fmvz.usp.br/CRAN//bin/linux/ubuntu/ xenial/
+
+Fetch the secure APT key:
+
+gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+
+Add it to keyring:
+
+gpg -a --export E084DAB9 | sudo apt-key add -
+
+Update your sources and upgrade your installation:
+
+sudo apt-get update && sudo apt-get upgrade
+
+Reinstall R:
+
+sudo apt-get install r-base r-base-dev  
+
