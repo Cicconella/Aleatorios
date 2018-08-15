@@ -1,0 +1,14 @@
+Install:
+sudo apt-get install postgresql postgresql-contrib
+
+Run it:
+sudo su - postgres
+psql
+
+Create user:
+CREATE USER aninha;
+ALTER USER aninha WITH PASSWORD 'pwd';
+
+Create database:
+CREATE DATABASE machiron OWNER aninha;
+
