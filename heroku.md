@@ -6,8 +6,21 @@
 heroku run bash
 ```
 
-### Create Fixture
+### Criar Fixture
 
 ```
-heroku run python manage.py dumpdata banco auth.User --indent=2 > dumperson
+heroku run python manage.py dumpdata banco auth.User --indent=2 > dumperson.json
 ```
+
+### Apagar tudo
+
+```
+./manage.py flush
+```
+
+### Carregar tudo da fixture
+
+```
+./manage.py loaddata banco/fixtures/dumperson.json 
+```
+
